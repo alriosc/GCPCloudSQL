@@ -1,14 +1,13 @@
-CREATE DATABASE IF NOT EXISTS uns;
-
-DROP TABLE IF EXISTS uns.cliente;
-CREATE TABLE uns.cliente (
+DROP TABLE IF EXISTS cliente;
+CREATE TABLE cliente 
+(
   id                         VARCHAR(3)  NOT NULL,
   nombre                     VARCHAR(20) NOT NULL,
   telefono                   VARCHAR(20) NOT NULL,
   direccion                  VARCHAR(20),
   ciudad                     VARCHAR(20),
   provincia                  VARCHAR(15),
-  pais                       VARCHAR(20),
+  país                       VARCHAR(20),
   codigo_postal              VARCHAR(15),
   historial_crediticio       VARCHAR(9),
   ventas_rep_id              VARCHAR(3),
@@ -25,12 +24,11 @@ INSERT INTO cliente VALUES ('302', 'Toms Sporting BUENOs', '540-987-6543','6741 
 'Harrisonburg', 'VA','US', '22809','MALO', '14', '1', NULL);
 INSERT INTO cliente VALUES ('303', 'Athletic Attire', '540-123-6789','54 Market St',
 'Harrisonburg', 'VA','US', '22808','BUENO', '14', '1', NULL);
-INSERT INTO cliente 
-VALUES ('304', 'Athletics For All', '540-987-1234','286 Main St', 'Harrisonburg', 'VA',
-'US', '22808','EXCELENTE', '12', '1', NULL);
-INSERT INTO cliente VALUES ('305', 'Shoes for Sports', '540-123-9876','538 High St',
+INSERT INTO cliente VALUES ('304', 'Athletics For All', '540-987-1234','286 Main St', 
+'Harrisonburg', 'VA','US', '22808','EXCELENTE', '12', '1', NULL);
+INSERT INTO cliente VALUES ('305', 'Shoes for Sports', '540-123-9876','538 High St', 
 'Harrisonburg', 'VA','US', '22809','EXCELENTE', '14', '1', NULL);
-INSERT INTO cliente VALUES ('306', 'BJ Athletics', '540-987-9999','632 Water St',
+INSERT INTO cliente VALUES ('306', 'BJ Athletics', '540-987-9999','632 Water St', 
 'Harrisonburg', 'VA','US', '22810','MALO', '12', '1', NULL);
 
 INSERT INTO cliente VALUES ('403', 'Athletics One', '717-234-6786','912 Columbia Rd',
@@ -50,7 +48,7 @@ INSERT INTO cliente VALUES ('203', 'New Delhi Sports', '91-11903338','11368 Chan
 'New Delhi', NULL, 'India', NULL,'BUENO', '11', '4', NULL);
 INSERT INTO cliente VALUES ('204', 'Ladysport', '1-206-104-0111','281 Queen Street',
 'Seattle', 'Washington', 'US', NULL,'EXCELENTE', '11', '1', NULL);
-INSERT INTO cliente VALUES ('205', 'Kim''s Sporting BUENOs', '852-3693888','15 Henessey Road',
+INSERT INTO cliente VALUES ('205', 'Kim\'s Sporting BUENOs', '852-3693888','15 Henessey Road',
 'Hong Kong', NULL, NULL, NULL,'EXCELENTE', '11', '4', NULL);
 INSERT INTO cliente VALUES ('206', 'Sportique', '33-93425722253','172 Rue de Place',
 'Cannes', NULL, 'France', NULL,'EXCELENTE', '13', '5', NULL);
@@ -60,10 +58,10 @@ INSERT INTO cliente VALUES ('208', 'Muench Sports', '49-895274449','435 Gruenest
 'Munich', NULL, 'Germany', NULL,'BUENO', '13', '5', NULL);
 
 INSERT INTO cliente VALUES ('209', 'Beisbol Si!', '809-352666','415 Playa Del Mar',
- 'San Pedro de Macoris', NULL, 'Dominican Republic', NULL, 'EXCELENTE', '11', '6', NULL);
+'San Pedro de Macoris', NULL, 'Dominican Republic', NULL, 'EXCELENTE', '11', '6', NULL);
 INSERT INTO cliente VALUES ('210', 'Futbol Sonora', '52-404555','5 Via Saguaro', 'Nogales',
 NULL, 'Mexico', NULL,'EXCELENTE', '12', '2', NULL);
-INSERT INTO cliente VALUES ('211', 'Helmut''s Sports', '42-2111222','45 Modrany', 'Prague',
+INSERT INTO cliente VALUES ('211', 'Helmut\'s Sports', '42-2111222','45 Modrany', 'Prague',
 NULL, 'Czechoslovakia', NULL,'EXCELENTE', '11', '5', NULL);
 INSERT INTO cliente VALUES ('212', 'Hamada Sport', '20-31209222','47A Corniche', 
 'Alexandria', NULL, 'Egypt', NULL,'EXCELENTE', '13', '3', NULL);
@@ -73,4 +71,5 @@ INSERT INTO cliente VALUES ('214', 'Sports Retail', '1-716-555-7777','115 Main S
 'Buffalo', 'NY', 'US', NULL, 'MALO', '11', '1', NULL);
 INSERT INTO cliente VALUES ('215', 'Sports Russia', '7-0953892444','7070 Yekatamina',
 'Saint Petersburg', NULL, 'Russia', NULL,'MALO', '11', '5', NULL);
-COMMIT;
+
+-- COMMIT;
