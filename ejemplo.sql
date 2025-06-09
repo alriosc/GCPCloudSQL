@@ -1,15 +1,14 @@
-CREATE SCHEMA IF NOT EXISTS UNS;
-USE UNS;
+CREATE DATABASE IF NOT EXISTS uns;
 
-DROP TABLE IF EXISTS cliente;
-CREATE TABLE cliente 
- (id                         VARCHAR(3)  NOT NULL,
+DROP TABLE IF EXISTS uns.cliente;
+CREATE TABLE uns.cliente (
+  id                         VARCHAR(3)  NOT NULL,
   nombre                     VARCHAR(20) NOT NULL,
   telefono                   VARCHAR(20) NOT NULL,
   direccion                  VARCHAR(20),
   ciudad                     VARCHAR(20),
   provincia                  VARCHAR(15),
-  país                       VARCHAR(20),
+  pais                       VARCHAR(20),
   codigo_postal              VARCHAR(15),
   historial_crediticio       VARCHAR(9),
   ventas_rep_id              VARCHAR(3),
@@ -17,9 +16,8 @@ CREATE TABLE cliente
   comentarios                VARCHAR(255),
   CONSTRAINT cliente_id_pk PRIMARY KEY (id),
   CONSTRAINT cliente_historial_crediticio_ck
-  CHECK (historial_crediticio IN ('EXCELENTE', 'BUENO', 'MALO'))
- );
-
+    CHECK (historial_crediticio IN ('EXCELENTE', 'BUENO', 'MALO'))
+);
 
 INSERT INTO cliente VALUES ('301', 'Sports,Inc', '540-123-4567','72 High St',
 'Harrisonburg', 'VA','US', '22809','EXCELENTE', '12', '1', NULL);
